@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/easystar-0.4.4.min.js"></script>
+    <script src="lib/utility.js"></script>
+    <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="input.js"></script>
+    <script src="classes/Map.js"></script>
+    <script src="classes/View.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div id="main-container">
+		<div id="canvas-container"></div>
+		<div id="app">
+			<div class="menu">
+				<button 
+				v-for="item in menu" 
+				:key="item.name"
+				v-on:click="brushSet(item.val)">
+					{{item.val}}
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="game.js"></script>
+</body>
+</html>

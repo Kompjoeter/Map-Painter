@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: row;
+  margin: 16px;
+} 
+
+#app .menu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+button {
+  background-color: white;
+  border: 1px solid gray;
+  width: 24px;
+}
+
+button:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: darkgray;
+}
