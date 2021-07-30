@@ -1,16 +1,23 @@
-var img = '';
+var img = [];
+var diameter = 10;
 
 function preload() {
-  img = loadImage('assets/water.png');
+  img[0] = loadImage('assets/water00.png');
+  img[1] = loadImage('assets/water01.png');
+  img[2] = loadImage('assets/water02.png');
+  img[3] = loadImage('assets/sand00.png');
+  img[4] = loadImage('assets/grass00.png');
+  img[5] = loadImage('assets/grass01.png');
+  img[6] = loadImage('assets/mountain00.png');
 }
 
 function setup() {
-  const c = createCanvas(24*16, 24*16);
+  const c = createCanvas(24*16, 12*16);
   c.parent('canvas-container');
   // New map, width/height must always be higher than view's.
-  map = new Map(64,64);
+  map = new Map(128,128);
   // New view
-  view = new View(24, 24, 16, map);
+  view = new View(48, 24, 8, map);
 }
   
 function draw() {
@@ -31,5 +38,6 @@ function draw() {
 	view.show(view.cellSize, map);
 
   // Brush functionality
-  brushPoint('white', 'filled', brush);
+  brushPoint('white', 'sprite', brush);
+  brushCircle('white', 'sprite', brush);
 }
