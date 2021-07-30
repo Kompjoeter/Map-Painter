@@ -14,23 +14,41 @@ body {
   margin: 16px;
 } 
 
+canvas {
+  border: 1px black solid;
+}
+
 #app .menu {
   display: flex;
   flex-direction: column;
-  margin-left: 16px;
+  margin-left: 8px;
+}
+
+.menu span {
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
 }
 
 button {
-  background-color: white;
-  border: 1px solid gray;
-  width: 24px;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  border: none;
 }
 
-button:hover {
-  background-color: lightgray;
+button img {
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+}
+
+button img:hover {
   cursor: pointer;
+  opacity: 75%;
 }
 
-button:active {
-  background-color: darkgray;
+button img:active {
+  opacity: 50%;
 }

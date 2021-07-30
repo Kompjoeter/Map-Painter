@@ -21,12 +21,15 @@
 		<div id="canvas-container"></div>
 		<div id="app">
 			<div class="menu">
-				<button 
+				<span
 				v-for="item in menu" 
-				:key="item.name"
-				v-on:click="brushSet(item.val)">
-					{{item.val}}
-				</button>
+				:key="item.name">
+					<button
+					v-on:click="brushSet(item.val)">
+						<img v-bind:src="`assets/${ item.name}.png`">
+					</button>
+					<p>{{item.name}}</p>
+				</span>
 			</div>
 		</div>
 	</div>

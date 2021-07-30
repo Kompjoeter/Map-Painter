@@ -29,16 +29,13 @@ class View {
   show(cs, m) {
     for(var x = 0; x < this.width; x++) {
       for(var y = 0; y < this.height; y++) {
+        var sprite = 0;
         if (m.map[this.minX+x][this.minY+y].occupant) {
-          fill('blue');
-        } else if (m.map[this.minX+x][this.minY+y].filled === 1) {
-          fill('black');
-          stroke('black');
-        } else if (m.map[this.minX+x][this.minY+y].filled === 0) {
-          fill('lightgray');
-          stroke('darkgray');
+          sprite = 0;
+        } else {
+          sprite = m.map[this.minX+x][this.minY+y].sprite;
         }
-        rect(x*cs, y*cs, cs, cs);
+        image(img[sprite], x*cs, y*cs);
       }
     }
   }
